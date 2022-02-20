@@ -1,1 +1,1 @@
-importScripts('https://cdn.jsdelivr.net/npm/empushy@1.0.72/dist/public/empushy-sw.js');
+importScripts('https://cdn.jsdelivr.net/npm/empushy@1.0.73/dist/public/empushy-sw.js');
