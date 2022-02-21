@@ -1,20 +1,22 @@
 <html>
     <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/empushy@1.0.76/dist/css/empushy.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/empushy@1.0.77/dist/css/empushy.css">
         <style>
             .body {
                 height: 200vh;
                 overflow: scroll;            
             }
         </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
     </head>
     <body>        
         <!--<label class="empushy-label">
           <input id="empBtn" type="checkbox"/>
           <div class="empushy-graphic"/>
         </label>-->
-        
-        
+        <div style="display: none" id="grabMe">I'm your content. Remember to set CSS display to none!</div>
         <div id="empushyRibbon">
             <div class="ribbon">
                 <div id="empushyBtn">
@@ -46,7 +48,7 @@
         </div>
         
               
-        <script src="https://cdn.jsdelivr.net/npm/empushy@1.0.76/dist/empushy.umd.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/empushy@1.0.77/dist/empushy.umd.js"></script>
         <script>empushy.initialise('a1023fa9-efcb-47eb-b4a3-7464292b89ef')</script>
     </body>  
 </html>
