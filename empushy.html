@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/empushy@1.0.79/dist/css/empushy.css">
+        <style>
+            .body {
+                height: 200vh;
+                overflow: scroll;            
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet">
+    </head>
+    <body>        
+        <!--<label class="empushy-label">
+          <input id="empBtn" type="checkbox"/>
+          <div class="empushy-graphic"/>
+        </label>-->
+        <div style="display: none" id="grabMe">I'm your content. Remember to set CSS display to none!</div>
+        <div id="empushyRibbon">
+            <div class="ribbon">
+                <div id="empushyBtn">
+                    <!--<svg id='empushyIcon' xmlns="http://www.w3.org/2000/svg" stroke="#242424" stroke-width="10" fill="black" viewBox="-10 -5 590 560">
+                    <path style="fill: #242424;" d="M0,300c0-54.66-.09-109.33,0-164C.14,97.83,22.56,66.5,58.35,55.37a90.57,90.57,0,0,1,26-3.81c62.5-.31,125-.17,187.49-.13a17.53,17.53,0,0,1,5.87.83c4.1,1.49,5.91,4.81,5.63,9s-2.57,7.25-6.85,8.12a37.84,37.84,0,0,1-7.46.48q-91.74,0-183.49,0c-28.66,0-49.6,12.89-61.46,38.93a62.64,62.64,0,0,0-5.42,25.1q-.54,166-.17,332c.06,36.39,28,64.47,64.29,64.55q165.74.33,331.48,0c37.4-.08,64.93-28.3,65-66,.12-61.83,0-123.66,0-185.49a37.19,37.19,0,0,1,.15-5.49,8.76,8.76,0,0,1,8.7-7.46c4.54-.14,8.23,2.52,9.13,6.89a29.63,29.63,0,0,1,.37,6c0,61.49-.33,123,.14,184.49.28,36.67-21.64,67.46-51.73,79.56a88.51,88.51,0,0,1-33.19,6.23q-164,.07-328,0c-40.94,0-73.52-25.61-82.72-64.85C.52,477.12.14,469.48.12,462,0,408,0,354,0,300Z"/>
+                    <path style="fill: #242424;" d="M466.13,15.07C474.89,8.24,484.29,3.47,495,1.33A65.47,65.47,0,0,1,564,31.7c14.33,23.74,12.8,54.27-5.63,75-21.44,24.14-43.79,47.51-66.45,70.53-15.2,15.43-39.73,13.5-55.29-3.09-19.93-21.26-40-42.42-59.77-63.8C361.69,94,356,74.61,360.21,52.7,369.36,5.64,424.93-15.69,463.35,13Zm-88.74,50.5c.05,11.64,3.74,22.08,11.58,30.58q30.5,33,61.5,65.62c9.67,10.2,21.8,9.88,31.42-.34,19.63-20.86,39.11-41.86,59-62.52,18.53-19.31,18.75-48.39.09-66.84s-47.28-18.12-66.37.58c-6.17,6.05-10.66,6-16.63,0a47,47,0,0,0-80.54,32.93Z"/>
+                    <path id="heart" style="fill: gold" d="M377.39,65.57a47,47,0,0,1,80.54-32.93c6,6,10.46,6.06,16.63,0,19.09-18.7,47.79-18.95,66.37-.58s18.44,47.53-.09,66.84c-19.84,20.66-39.32,41.66-59,62.52-9.62,10.22-21.75,10.54-31.42.34Q419.53,129.13,389,96.15C381.13,87.65,377.44,77.21,377.39,65.57Z"/>
+                  </svg>-->
+                    <svg id="empushyIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                        <g id="empushybtn-g1">
+                            <g id="empushybtn-outer" transform="matrix(6.3732 0 0 6.3732 35.6506-88.4366)">
+                                <g id="empushybtn-inner">
+                                    <path id="empushybtn-case" d="M72.46717,60.46687v0v29.967c-.001,2.814-1.136,5.333-2.972,7.165-1.838,1.83-4.36,2.953-7.147,2.954h-52.066c-2.787-.001-5.309-1.124-7.147-2.954-1.836-1.832-2.971-4.351-2.972-7.165v-52.067c.001-2.782,1.135-5.304,2.974-7.145c1.841-1.839,7.145-2.974,7.145-2.974h30.025" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-dashoffset="211.807" stroke-dasharray="211.807"/>
+                                    <path id="empushybtn-heart" d="M72.72917,42.75987c-.678.718-1.519,1.051-2.358,1.053-.829-.003-1.647-.325-2.312-1.028l-9.31-9.936-.02-.014-.013-.02v0c-.172-.172-.363-.382-.543-.585-1.069-1.299-1.701-2.908-1.703-4.692.001-2.045.827-3.88,2.166-5.22c1.342-1.337,3.179-2.159,5.212-2.159c2.173,0,4.139.945,5.486,2.451l.031.023.092.099c.097.085.203.15.314.204l.062.028c.152.067.312.108.474.12l.064.002c.164.005.327-.016.485-.066l.062-.023c.158-.058.305-.143.438-.256l.028-.016.023-.031.099-.092v0c1.318-1.497,3.281-2.443,5.455-2.443c2.033.001,3.87.822,5.212,2.159c1.34,1.34,2.166,3.175,2.166,5.22-.001,1.79-.637,3.404-1.712,4.704l-.016.019c-.125.157-.3.337-.543.578l-.012.019-.018.013-9.309,9.889Z" fill="none" stroke="#000" stroke-width="3" stroke-dashoffset="82.345647" stroke-dasharray="82.345647"/>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <!--- left inner shadow --->
+                <i></i>
+                <!--- right inner shadow --->
+                <i></i>
+                <!--- left ribbon --->
+                <i id="empushybtn-ribbon"></i>
+                <!--- right ribbon --->
+                <i></i>
+            </div>
+        </div>
+        
+              
+        <script src="https://cdn.jsdelivr.net/npm/empushy@1.0.79/dist/empushy.umd.js"></script>
+        <script>empushy.initialise('a1023fa9-efcb-47eb-b4a3-7464292b89ef')</script>
+        <!-- PushAlert -->
+        <script type="text/javascript">
+                (function(d, t) {
+                        var g = d.createElement(t),
+                        s = d.getElementsByTagName(t)[0];
+                        g.src = "https://cdn.pushalert.co/integrate_68039e28cf8a1cd2b0b32095a6a4be5d.js";
+                        s.parentNode.insertBefore(g, s);
+                }(document, "script"));
+        </script>
+        <!-- End PushAlert -->
+    </body>  
+</html>

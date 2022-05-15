@@ -1,2 +1,13 @@
 /workings/**
 /assets/mp4/**
+pushd.html
+pushd_old.html
+pushd-closing.html
+pushd-insight.html
+pushd-nightly.html
+pushd-part3.html
+pushd-poststudy.html
+pushd-prestudy.html
+pushd-start.html
+firebase-messaging-sw.js
+web-push-sw.js
