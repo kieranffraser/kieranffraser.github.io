@@ -1,5 +1,15 @@
 /workings/**
 /assets/mp4/**
+/node_modules/**
+
+# Redesign planning/process notes — not part of the shipped site.
+/design_brief.md
+/design_spec.md
+/design_example.html
+/content_context.md
+/personal_context.md
+/assets/css/site.css
+
 pushd.html
 pushd_old.html
 pushd-closing.html

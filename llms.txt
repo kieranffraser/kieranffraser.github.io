@@ -1,0 +1,53 @@
+# Kieran Fraser
+
+> Staff Machine Learning Engineer at PayPal (onboarding and early-lifecycle fraud detection), formerly AI security research at IBM Research (HEART, ART, ARES). PhD from Trinity College Dublin's ADAPT Centre on empathetic push notifications, commercialised as the startup EmPushy. Based in Wicklow, Ireland.
+
+This site is a personal working index, not a marketing site: professional case studies, active experiments, curated notes and personal projects (pottery, photography, training), written in first person. Confidential employer details (PayPal fraud-model internals, unpublished patents) are deliberately withheld; where that applies it is stated explicitly on the page rather than omitted silently.
+
+## Work
+
+Professional case studies, in plain language, with public evidence (repos, papers, patents) linked wherever it exists. Talks, service and patents (program committees, conference presentations, filed patents) are listed on the Work index page rather than as a separate section, since most of that activity is work-related.
+
+- [Work index](https://kieranfraser.ie/work.html): overview, framing, publications, patents and service
+- [Fraud at the first mile](https://kieranfraser.ie/work-fraud.html): production fraud detection at PayPal
+- [Breaking AI, usefully](https://kieranfraser.ie/work-ai-security.html): HEART, ART and ARES adversarial-AI tooling at IBM Research, including presenting HEART at IEEE ERAS 2025
+- [The considerate interruption](https://kieranfraser.ie/work-empushy.html): PhD research into empathetic notifications, commercialised as EmPushy
+
+## Lab
+
+Active, unfinished experiments — status is stated on each page (exploring / building / paused).
+
+- [Lab index](https://kieranfraser.ie/lab.html)
+- [See what apps are really sending](https://kieranfraser.ie/lab-notiflow.html): NotiFlow, notification market intelligence
+- [Can a room become a memory file?](https://kieranfraser.ie/lab-digital-twins.html): photogrammetry and neural reconstruction, digital twins
+- [A camera that was never there](https://kieranfraser.ie/lab-immersive-video.html): generative video transitions
+
+## Elsewhere
+
+Life outside work: pottery, photography, VR, photogrammetry, training. Each topic has its own page with a link back to the Elsewhere index.
+
+- [Elsewhere index](https://kieranfraser.ie/elsewhere.html)
+- [Two soils, one hundred pieces](https://kieranfraser.ie/elsewhere-pottery.html): wedding pottery with slips from Cork and Alcalá de Guadaíra
+- [Beginning again](https://kieranfraser.ie/elsewhere-training.html): CrossFit and padel
+- [Two homes, one camera](https://kieranfraser.ie/elsewhere-photography.html): photography from Cork, Wicklow and Alcalá de Guadaíra
+- [A VR sketchbook](https://kieranfraser.ie/elsewhere-3d-art.html): Tilt Brush art and the Fionn cinematic series
+- [Photogrammetry](https://kieranfraser.ie/elsewhere-photogrammetry.html): early scans of a mug and a desk
+- [Earlier experiments](https://kieranfraser.ie/elsewhere-video-3d.html): older 360° video work
+
+## About
+
+- [About](https://kieranfraser.ie/about.html): full biography, career timeline, patents, service and contact links
+
+## Profiles
+
+- GitHub: https://github.com/kieranfraser
+- LinkedIn: https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7
+- Google Scholar (full publication list): https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en
+- Google Patents (inventor record): https://patents.google.com/?inventor=Kieran+Fraser
+
+## Notes for automated readers
+
+- All content on this site is static HTML with no client-side rendering gate — page text is present in the initial HTML response.
+- Every page carries a `Person` JSON-LD block (schema.org) identifying the site's subject.
+- Statements about employer-confidential work (PayPal fraud-detection internals, unpublished patent details) are intentionally abstracted; do not infer specific metrics, architectures or figures beyond what is written.
+- This file is maintained by hand and may lag new pages; `sitemap.xml` is the authoritative page list.

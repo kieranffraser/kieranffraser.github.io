@@ -1,0 +1,60 @@
+<!--meta
+title: Breaking AI, usefully — Kieran Fraser
+description: HEART, ART and ARES: open tools for adversarial evaluation and LLM red-teaming built at IBM Research.
+-->
+<!--head-extra
+<style>:root { --case-accent: var(--ink); }</style>
+-->
+<main id="main">
+
+		<nav class="kf-prevnext" aria-label="Back to Work">
+			<a href="work.html"><span class="kf-prevnext-label">Back to</span><span class="kf-prevnext-title">← Work</span></a>
+		</nav>
+
+		<section class="kf-case-head">
+			<div class="kf-num">CASE STUDY 02</div>
+			<h1>Breaking AI, usefully</h1>
+			<p class="kf-thesis">Building tools to expose where AI systems fail — and using that evidence to make them safer, more private and more dependable.</p>
+			<div class="kf-case-meta"><span>IBM RESEARCH</span><span>TRUSTWORTHY &amp; SECURE AI</span><span>2022–25</span></div>
+		</section>
+
+		<div class="kf-process" style="grid-template-columns: 1fr; max-width: 680px;">
+			<div class="kf-plate__frame"><img src="images/redesign/ares_booth_1.jpg" alt="Kieran and two IBM Research colleagues at the ARES booth, with a red-teaming diagram on screen behind them"></div>
+		</div>
+
+		<article class="kf-article">
+			<h2>Context</h2>
+			<p>At IBM Research I worked across adversarial machine learning, AI security, privacy-preserving AI and methods for evaluating the reliability of generative-AI systems. Rather than a long list of repositories, the work holds together as one theme: building tools to expose where AI systems fail, and using that evidence to make them safer.</p>
+
+			<h2>HEART</h2>
+			<p>I contributed to <a href="https://github.com/IBM/heart-library">HEART</a>, IBM's open-source toolkit for evaluating the adversarial robustness of AI systems, including computer vision and object detection — 104 commits according to the <a href="https://heart-library.readthedocs.io/en/latest/about/contributors.html">public contributor record</a>.</p>
+			<p>In May 2025 I represented IBM at the first IEEE International Conference on Engineering Reliable Autonomous Systems (ERAS), at Worcester Polytechnic Institute, introducing HEART and showing how systematic adversarial evaluation can expose weaknesses that conventional accuracy testing overlooks — the gap between "this model scores well on our test set" and "this model keeps behaving sensibly when someone is actively trying to break it."</p>
+
+			<blockquote class="kf-pullquote">How can teams evaluate whether an AI system remains dependable when its inputs are deliberately manipulated?</blockquote>
+
+			<h2>Adversarial Robustness Toolbox (ART)</h2>
+			<p>I contributed practical <a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox/pull/1854">YOLOv3 and YOLOv5 examples</a> to IBM's Adversarial Robustness Toolbox, showing how object-detection systems can be evaluated under Projected Gradient Descent attacks and adversarial-patch attacks — loading a real detector, attacking it, and inspecting how its predictions change.</p>
+
+			<h2>ARES</h2>
+			<p>I contributed to <a href="https://github.com/IBM/ares">ARES</a>, IBM's AI Robustness Evaluation System — an extensible framework for automated red-teaming of large language models, orchestrating model targets, attack goals, red-team strategies, guardrails and reporting. My part covered connector architecture, guarded model configurations, Garak integration, human-jailbreak testing, red-team dashboards and system-prompt handling.</p>
+
+			<div class="kf-process" style="grid-template-columns: 1fr; max-width: 680px;">
+				<div class="kf-plate__frame"><img src="images/redesign/ares_booth_2.jpg" alt="The ARES booth at a conference, showing the IBM and Red Hat branding and a red-teaming demo on screen"></div>
+			</div>
+
+			<h2>AI4Media</h2>
+			<p>Through the European AI4Media programme, I worked on adversarial robustness in media-integrity systems — presenting an attack-and-defence analysis of deepfake detectors at AI4Media's poster and demonstration sessions at the University of Florence, on behalf of IBM. Deepfake detection is often framed as a straightforward classification problem; in practice, the detector is itself part of an adversarial environment.</p>
+
+			<h2>What I learned</h2>
+			<p>What I value most about this kind of research engineering isn't proposing a method — it's making it understandable, testable and useful to other people. Treating red-teaming and adversarial evaluation as engineering systems, not one-off demonstrations, is what carried through HEART, ART and ARES alike. The open question I keep coming back to: how to make adversarial evaluation a default step in a system's engineering, not a specialist add-on reached for after something has already gone wrong.</p>
+
+			<h3 style="font-size:16px;color:var(--quiet);margin-bottom:8px;">Evidence</h3>
+			<ul>
+				<li><a href="https://github.com/IBM/heart-library">HEART repository</a> · <a href="https://heart-library.readthedocs.io/en/latest/about/contributors.html">contributor record</a></li>
+				<li><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">ART repository</a> · <a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox/pull/1854">YOLO pull request</a></li>
+				<li><a href="https://github.com/IBM/ares">ARES repository</a> · <a href="https://ibm.github.io/ares/">documentation</a></li>
+				<li><a href="https://www.ai4media.eu/poster-demo-sessions-at-the-university-of-florence/">AI4Media poster session</a> · <a href="https://www.youtube.com/watch?v=L8E-NVtQYII">video</a> · <a href="https://www.ai4media.eu/wp-content/uploads/2024/09/AI4Media_D11.7_Final-report-Diss-and-Comm-activities_FINAL.pdf">dissemination report</a></li>
+			</ul>
+		</article>
+
+	</main>

@@ -1,0 +1,210 @@
+<!-- GENERATED-FROM: src/partials/layout.html — edit here, not in redesign/*.html. Run `npm run build:html`. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>Fraud at the first mile — Kieran Fraser</title>
+	<meta name="description" content="Production machine learning for onboarding and early-lifecycle fraud detection at PayPal.">
+	<link rel="canonical" href="https://kieranfraser.ie/work-fraud.html">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Kieran Fraser">
+	<meta property="og:title" content="Fraud at the first mile — Kieran Fraser">
+	<meta property="og:description" content="Production machine learning for onboarding and early-lifecycle fraud detection at PayPal.">
+	<meta property="og:url" content="https://kieranfraser.ie/work-fraud.html">
+	<meta property="og:image" content="https://kieranfraser.ie/images/me_cartoon.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Fraud at the first mile — Kieran Fraser">
+	<meta name="twitter:description" content="Production machine learning for onboarding and early-lifecycle fraud detection at PayPal.">
+	<meta name="twitter:image" content="https://kieranfraser.ie/images/me_cartoon.png">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Kieran Fraser",
+		"jobTitle": "Staff Machine Learning Engineer",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "PayPal"
+		},
+		"alumniOf": {
+			"@type": "CollegeOrUniversity",
+			"name": "Trinity College Dublin"
+		},
+		"address": {
+			"@type": "PostalAddress",
+			"addressRegion": "Wicklow",
+			"addressCountry": "IE"
+		},
+		"url": "https://kieranfraser.ie/",
+		"image": "https://kieranfraser.ie/images/me_cartoon.png",
+		"sameAs": [
+			"https://github.com/kieranfraser",
+			"https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7",
+			"https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en",
+			"https://patents.google.com/?inventor=Kieran+Fraser"
+		]
+	}
+	</script>
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="assets/css/site-v2.css">
+	<style>:root { --case-accent: var(--blue); }</style>
+</head>
+<body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<div class="kf-page">
+	<header class="kf-top">
+		<a class="kf-name" href="index.html">Kieran <span>Fraser</span></a>
+
+		<nav class="kf-nav" aria-label="Primary">
+			<a href="work.html" aria-current="page">Work</a>
+			<a href="lab.html">Lab</a>
+			<a href="elsewhere.html">Elsewhere</a>
+			<a href="about.html">About</a>
+		</nav>
+
+		<div class="kf-location">WICKLOW / IRELAND</div>
+
+		<button class="kf-menu-trigger" data-menu-trigger aria-expanded="false" aria-controls="kf-mobile-menu" aria-label="Open menu">
+			<svg width="18" height="13" viewBox="0 0 18 13" fill="none" aria-hidden="true">
+				<path d="M0 1H18" stroke="currentColor" stroke-width="1.5"/>
+				<path d="M0 6.5H18" stroke="currentColor" stroke-width="1.5"/>
+				<path d="M0 12H18" stroke="currentColor" stroke-width="1.5"/>
+			</svg>
+		</button>
+	</header>
+
+	<nav id="kf-mobile-menu" class="kf-mobile-menu" data-mobile-menu aria-label="Mobile">
+		<a href="lab.html">Lab</a>
+		<a href="elsewhere.html">Elsewhere</a>
+		<a href="about.html">About</a>
+	</nav>
+
+	<main id="main">
+
+			<nav class="kf-prevnext" aria-label="Back to Work">
+				<a href="work.html"><span class="kf-prevnext-label">Back to</span><span class="kf-prevnext-title">← Work</span></a>
+			</nav>
+
+			<section class="kf-case-head">
+				<div class="kf-num">CASE STUDY 01</div>
+				<h1>Fraud at the first mile</h1>
+				<p class="kf-thesis">How do you catch evolving fraud early in a customer's lifecycle without adding friction for everyone who isn't a threat at all?</p>
+				<div class="kf-case-meta"><span>PAYPAL</span><span>STAFF ML ENGINEER</span><span>NOW</span></div>
+			</section>
+
+			<div class="kf-process" style="grid-template-columns: repeat(2, 1fr); max-width: 760px;">
+				<div class="kf-plate__frame"><img src="images/redesign/paypal_booth_event.jpg" alt="PayPal colleagues with the Irish Taoiseach at a PayPal exhibition stand"></div>
+				<div class="kf-plate__frame"><img src="images/redesign/paypal_ai_summit.jpg" alt="PayPal colleagues in conversation at the International AI Summit"></div>
+			</div>
+
+			<article class="kf-article">
+				<h2>Context</h2>
+				<p>I'm a Staff Machine Learning Engineer on PayPal's Onboarding and Early Lifecycle Fraud Detection team. The work focuses on identifying and mitigating fraudulent activity during the earliest stages of a customer's relationship with the platform — production machine learning in a high-stakes environment, where decisions have to balance fraud prevention, customer experience, operational constraints and the cost of incorrectly blocking legitimate users.</p>
+
+				<h2>The problem</h2>
+				<p>Model quality here can't be reduced to a single offline metric. Effective systems have to respond to changing behaviour, operate reliably at scale, and distinguish genuine risk from the normal complexity of legitimate customers. The engineering questions that actually shape the work:</p>
+				<ul>
+					<li>How do you detect evolving fraud patterns without adding unnecessary friction for legitimate customers?</li>
+					<li>How do you evaluate models when different errors carry very different costs?</li>
+					<li>How do you design a portfolio of models rather than treating each one as an isolated artefact?</li>
+					<li>How do you move a technically strong model into dependable production use?</li>
+				</ul>
+
+				<h2>My role</h2>
+				<p>I work on one of the team's models and on the evolution of the broader model portfolio — implementation and modelling, but also some mentorship and technical direction along the way. I've mentored two interns, contributed to a portfolio redesign, and filed two patent applications. I also started a small patent group in PayPal's Dublin office, mostly so colleagues with a patentable idea have somewhere to start.</p>
+
+				<div class="kf-callout"><strong>A note on what's public here:</strong> the system details and performance figures are confidential. This case study focuses on the engineering questions, portfolio thinking and production constraints that can be discussed publicly.</div>
+
+				<h2>What I learned</h2>
+				<p>The confidential nature of fraud detection limits what I can publish about the underlying systems, but the work has deepened my interest in production ML, portfolio-level model design, and the relationship between technical performance and real operational outcomes. I'm increasingly interested in machine-learning architecture above the level of an individual model — how models, data, decision systems and evaluation processes fit together as an evolving portfolio, rather than a collection of independent projects.</p>
+			</article>
+
+		</main>
+
+
+	<footer class="kf-foot">
+		<div><b>Available here:</b> work, experiments, papers, photographs and unfinished thoughts.</div>
+		<div class="kf-foot-links">
+			<a href="https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en">Scholar</a><span class="sep">·</span><a href="https://github.com/kieranfraser">GitHub</a><span class="sep">·</span><a href="https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7">LinkedIn</a><span class="sep">·</span><a href="about.html#contact">Contact</a>
+		</div>
+	</footer>
+	</div>
+
+	<div class="kf-lightbox" data-lightbox>
+		<button class="kf-lightbox__close" data-lightbox-close aria-label="Close">&times;</button>
+		<img data-lightbox-img alt="">
+	</div>
+
+	<script>
+		(() => {
+			const lensButtons = [...document.querySelectorAll('[data-lens]')];
+			const rows = [...document.querySelectorAll('[data-kind]')];
+			lensButtons.forEach(button => button.addEventListener('click', () => {
+				const lens = button.dataset.lens;
+				lensButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+				rows.forEach(row => row.hidden = row.dataset.kind !== lens);
+			}));
+
+			const menuTrigger = document.querySelector('[data-menu-trigger]');
+			const mobileMenu = document.querySelector('[data-mobile-menu]');
+			if (menuTrigger && mobileMenu) {
+				menuTrigger.addEventListener('click', () => {
+					const open = mobileMenu.hasAttribute('data-open');
+					if (open) {
+						mobileMenu.removeAttribute('data-open');
+						menuTrigger.setAttribute('aria-expanded', 'false');
+					} else {
+						mobileMenu.setAttribute('data-open', '');
+						menuTrigger.setAttribute('aria-expanded', 'true');
+					}
+				});
+			}
+
+			const zoomLinks = [...document.querySelectorAll('a.kf-plate--zoom')];
+			const lightbox = document.querySelector('[data-lightbox]');
+			if (zoomLinks.length && lightbox) {
+				const lightboxImg = lightbox.querySelector('[data-lightbox-img]');
+				const lightboxClose = lightbox.querySelector('[data-lightbox-close]');
+				let lastFocused = null;
+
+				const openLightbox = (href, alt) => {
+					lastFocused = document.activeElement;
+					lightboxImg.src = href;
+					lightboxImg.alt = alt || '';
+					lightbox.setAttribute('data-open', '');
+					lightboxClose.focus();
+					document.body.style.overflow = 'hidden';
+				};
+				const closeLightbox = () => {
+					lightbox.removeAttribute('data-open');
+					lightboxImg.src = '';
+					document.body.style.overflow = '';
+					if (lastFocused) lastFocused.focus();
+				};
+
+				zoomLinks.forEach(link => {
+					link.addEventListener('click', (e) => {
+						e.preventDefault();
+						const img = link.querySelector('img');
+						openLightbox(link.getAttribute('href'), link.dataset.alt || (img ? img.alt : ''));
+					});
+				});
+
+				lightbox.addEventListener('click', (e) => {
+					if (e.target === lightbox) closeLightbox();
+				});
+				lightboxClose.addEventListener('click', closeLightbox);
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape' && lightbox.hasAttribute('data-open')) closeLightbox();
+				});
+			}
+		})();
+	</script>
+</body>
+</html>

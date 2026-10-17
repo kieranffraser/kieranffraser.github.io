@@ -1,0 +1,17 @@
+{
+  "name": "fraserkieran.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal site, served statically via GitHub Pages.",
+  "scripts": {
+    "dev": "http-server . -p 8080 -c-1",
+    "build:css": "sass assets/sass/main.scss assets/css/main.css --style=expanded --no-source-map",
+    "watch:css": "sass assets/sass/main.scss assets/css/main.css --style=expanded --no-source-map --watch",
+    "build:html": "node scripts/build-html.js"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "playwright": "^1.63.0",
+    "sass": "^1.79.4"
+  }
+}

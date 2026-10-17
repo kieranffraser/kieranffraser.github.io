@@ -1,0 +1,416 @@
+<!-- GENERATED-FROM: src/partials/layout.html — edit here, not in redesign/*.html. Run `npm run build:html`. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<title>About — Kieran Fraser</title>
+	<meta name="description" content="Staff Machine Learning Engineer at PayPal, formerly IBM Research. PhD at Trinity College Dublin. Based in Wicklow, Ireland.">
+	<link rel="canonical" href="https://kieranfraser.ie/about.html">
+	<meta property="og:type" content="profile">
+	<meta property="og:site_name" content="Kieran Fraser">
+	<meta property="og:title" content="About — Kieran Fraser">
+	<meta property="og:description" content="Staff Machine Learning Engineer at PayPal, formerly IBM Research. PhD at Trinity College Dublin. Based in Wicklow, Ireland.">
+	<meta property="og:url" content="https://kieranfraser.ie/about.html">
+	<meta property="og:image" content="https://kieranfraser.ie/images/me_cartoon.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="About — Kieran Fraser">
+	<meta name="twitter:description" content="Staff Machine Learning Engineer at PayPal, formerly IBM Research. PhD at Trinity College Dublin. Based in Wicklow, Ireland.">
+	<meta name="twitter:image" content="https://kieranfraser.ie/images/me_cartoon.png">
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Person",
+		"name": "Kieran Fraser",
+		"jobTitle": "Staff Machine Learning Engineer",
+		"worksFor": {
+			"@type": "Organization",
+			"name": "PayPal"
+		},
+		"alumniOf": {
+			"@type": "CollegeOrUniversity",
+			"name": "Trinity College Dublin"
+		},
+		"address": {
+			"@type": "PostalAddress",
+			"addressRegion": "Wicklow",
+			"addressCountry": "IE"
+		},
+		"url": "https://kieranfraser.ie/",
+		"image": "https://kieranfraser.ie/images/me_cartoon.png",
+		"sameAs": [
+			"https://github.com/kieranfraser",
+			"https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7",
+			"https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en",
+			"https://patents.google.com/?inventor=Kieran+Fraser"
+		]
+	}
+	</script>
+	<link rel="apple-touch-icon" href="images/favicon.png">
+	<link rel="shortcut icon" href="images/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="assets/css/site-v2.css">
+	<style>
+			.kf-about-intro {
+				display: grid;
+				grid-template-columns: 1fr 320px;
+				gap: 24px;
+				align-items: start;
+				padding: 44px 28px 10px;
+			}
+			.kf-about-intro p { max-width: 62ch; margin-bottom: 16px; color: var(--ink); line-height: 1.6; }
+			.kf-about-portrait-block { padding-top: 6px; }
+			.kf-about-portrait {
+				position: relative;
+				width: 100%;
+				aspect-ratio: 1 / 1;
+				background: var(--yellow);
+				border: 1px solid var(--line);
+				box-shadow: 8px 8px 0 var(--ink);
+				overflow: hidden;
+				transform: rotate(-1.5deg);
+			}
+			.kf-about-portrait img { width: 100%; height: 100%; object-fit: cover; }
+			.kf-about-caption {
+				position: relative;
+				margin: 24px 0 0 24px;
+				max-width: calc(100% - 24px);
+				background: var(--paper);
+				color: var(--ink);
+				border: 1px solid var(--ink);
+				box-shadow: 4px 4px 0 var(--ink);
+				padding: 9px 14px;
+				transform: rotate(1deg);
+			}
+			.kf-about-caption b { display: block; font-size: 17px; font-weight: 500; letter-spacing: -.01em; }
+			.kf-about-caption span { display: block; margin-top: 2px; font: 11px ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--quiet); text-transform: uppercase; letter-spacing: .05em; }
+			@media (max-width: 700px) {
+				.kf-about-intro { grid-template-columns: 1fr; padding: 34px 18px 10px; }
+				.kf-about-portrait-block { width: 260px; margin: 0 auto; }
+			}
+
+			.kf-timeline {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 20px;
+				padding: 40px 28px 10px;
+			}
+			.kf-timeline-item {
+				position: relative;
+				display: block;
+				background: var(--paper-2);
+				border: 1px solid var(--line);
+				border-top: 6px solid var(--timeline-accent, var(--ink));
+				box-shadow: 6px 6px 0 var(--ink);
+				padding: 18px 16px 16px;
+				text-decoration: none;
+				color: inherit;
+			}
+			.kf-timeline-item__year {
+				display: inline-block;
+				font: 700 13px ui-monospace, SFMono-Regular, Menlo, monospace;
+				text-transform: uppercase;
+				letter-spacing: .04em;
+				color: var(--timeline-fg, color-mix(in srgb, var(--timeline-accent, var(--quiet)) 55%, var(--ink) 45%));
+				background: color-mix(in srgb, var(--timeline-accent, var(--quiet)) 18%, var(--paper) 82%);
+				padding: 3px 10px;
+				margin-bottom: 14px;
+				transform: rotate(-2deg);
+			}
+			.kf-timeline-item__title { font-size: 19px; font-weight: 500; letter-spacing: -.015em; margin-bottom: 8px; line-height: 1.2; }
+			.kf-timeline-item__desc { font-size: 14px; line-height: 1.5; color: var(--ink); }
+			.kf-timeline-item .kf-aside { display: block; margin: 12px 0 0; }
+			@media (max-width: 900px) {
+				.kf-timeline { grid-template-columns: repeat(2, 1fr); }
+			}
+			@media (max-width: 600px) {
+				.kf-timeline { grid-template-columns: 1fr; padding: 30px 18px 10px; }
+			}
+
+			.kf-press-note {
+				padding: 0 28px;
+				margin-top: -6px;
+			}
+			.kf-press-note span {
+				display: inline-block;
+				font-family: "Caveat", cursive;
+				font-size: 20px;
+				color: var(--ink-soft, var(--quiet));
+				transform: rotate(-2deg);
+			}
+			@media (max-width: 700px) { .kf-press-note { padding: 0 18px; } }
+		</style>
+</head>
+<body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<div class="kf-page">
+	<header class="kf-top">
+		<a class="kf-name" href="index.html">Kieran <span>Fraser</span></a>
+
+		<nav class="kf-nav" aria-label="Primary">
+			<a href="work.html">Work</a>
+			<a href="lab.html">Lab</a>
+			<a href="elsewhere.html">Elsewhere</a>
+			<a href="about.html" aria-current="page">About</a>
+		</nav>
+
+		<div class="kf-location">WICKLOW / IRELAND</div>
+
+		<button class="kf-menu-trigger" data-menu-trigger aria-expanded="false" aria-controls="kf-mobile-menu" aria-label="Open menu">
+			<svg width="18" height="13" viewBox="0 0 18 13" fill="none" aria-hidden="true">
+				<path d="M0 1H18" stroke="currentColor" stroke-width="1.5"/>
+				<path d="M0 6.5H18" stroke="currentColor" stroke-width="1.5"/>
+				<path d="M0 12H18" stroke="currentColor" stroke-width="1.5"/>
+			</svg>
+		</button>
+	</header>
+
+	<nav id="kf-mobile-menu" class="kf-mobile-menu" data-mobile-menu aria-label="Mobile">
+		<a href="work.html">Work</a>
+		<a href="lab.html">Lab</a>
+		<a href="elsewhere.html">Elsewhere</a>
+	</nav>
+
+	<main id="main">
+
+			<div class="kf-eyebrow" style="padding: 44px 28px 0 28px; margin-bottom: 0;"><i class="kf-mark" aria-hidden="true"></i> About</div>
+
+			<section class="kf-about-intro">
+				<div>
+					<p>I'm Kieran Fraser, a Staff Machine Learning Engineer based in Wicklow, Ireland. I currently work on onboarding and early-lifecycle fraud detection at PayPal. Before that, I built open-source tools for testing the security and reliability of AI systems at IBM Research.</p>
+					<p>My path into industry began with a Master's in Computer Engineering, then a PhD at Trinity College Dublin's ADAPT Centre, where I studied how push notifications could become more transparent and empathetic, and then tried to turn that research into a product through EmPushy.</p>
+					<p>I grew up in Cork and now live in Wicklow with my partner, Ana. Our lives connect Ireland with her home in Alcalá de Guadaíra, near Seville. Outside work, I photograph places, experiment with spatial media, train and make things — currently including a hundred small pottery pieces for our wedding.</p>
+				</div>
+				<div class="kf-about-portrait-block">
+					<div class="kf-about-portrait">
+						<img src="images/me_cartoon.png" alt="Hand-drawn editorial portrait of Kieran Fraser">
+						<i class="kf-crosshair" aria-hidden="true"></i>
+					</div>
+					<div class="kf-about-caption"><b>Kieran Fraser</b><span>Wicklow, Ireland</span></div>
+				</div>
+			</section>
+
+			<div class="kf-process" style="grid-template-columns: repeat(2, 1fr); max-width: 640px;">
+				<div class="kf-plate__frame"><img src="images/redesign/grad_masters_trinity.jpg" alt="Kieran and classmates in Trinity gowns after the Master's in Computer Engineering graduation"></div>
+				<div class="kf-plate__frame"><img src="images/redesign/grad_phd_trinity.jpg" alt="Kieran in his PhD gown in Trinity's Front Square with his father Barry and his aunt Therese"></div>
+			</div>
+
+			<div class="kf-timeline">
+				<div class="kf-timeline-item" style="--timeline-accent: var(--blue)">
+					<div class="kf-timeline-item__year">PhD</div>
+					<div class="kf-timeline-item__title">Trinity College Dublin — ADAPT Centre</div>
+					<p class="kf-timeline-item__desc">Research into transparent, context-aware and empathetic push notifications.</p>
+					<span class="kf-aside">four years, one big question</span>
+				</div>
+				<div class="kf-timeline-item" style="--timeline-accent: var(--orange)">
+					<div class="kf-timeline-item__year">Startup</div>
+					<div class="kf-timeline-item__title">EmPushy</div>
+					<p class="kf-timeline-item__desc">Enterprise Ireland-backed attempt to turn that research into a product. Covered by SiliconRepublic, ADAPT and an Appen case study.</p>
+					<span class="kf-aside">turns out startups are hard</span>
+				</div>
+				<div class="kf-timeline-item" style="--timeline-accent: var(--ink)">
+					<div class="kf-timeline-item__year">2022–25</div>
+					<div class="kf-timeline-item__title">IBM Research</div>
+					<p class="kf-timeline-item__desc">Trustworthy AI, adversarial robustness and generative-AI security. Contributed to HEART, ARES and ART.</p>
+					<span class="kf-aside">breaking things, carefully</span>
+				</div>
+				<div class="kf-timeline-item" style="--timeline-accent: var(--yellow); --timeline-fg: var(--yellow-ink)">
+					<div class="kf-timeline-item__year">Now</div>
+					<div class="kf-timeline-item__title">PayPal</div>
+					<p class="kf-timeline-item__desc">Staff Machine Learning Engineer, onboarding and early-lifecycle fraud detection. Two patent applications filed; started a small patent group in the Dublin office.</p>
+					<span class="kf-aside">still breaking things, more carefully</span>
+				</div>
+			</div>
+
+			<dl class="kf-now">
+				<div class="kf-now-item"><dt>At work</dt><dd>Onboarding &amp; early-lifecycle fraud detection at PayPal.</dd></div>
+				<div class="kf-now-item"><dt>In the lab</dt><dd>Notification intelligence and digital twins.</dd></div>
+				<div class="kf-now-item"><dt>At home</dt><dd>Pottery wedding gifts with Ana — Cork and Alcalá slips.</dd></div>
+				<div class="kf-now-item"><dt>In motion</dt><dd>Rebuilding CrossFit, playing padel, learning Wicklow.</dd></div>
+			</dl>
+
+			<section class="kf-quiet-section">
+				<h2>Patents &amp; service</h2>
+				<div class="kf-ref-list">
+					<div class="kf-ref-row">
+						<svg class="kf-ref-row__icon" style="color:var(--blue)" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5a4 4 0 00-2.2 7.3c.4.3.7.8.7 1.3v.4h3v-.4c0-.5.3-1 .7-1.3A4 4 0 008 1.5z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/><path d="M6.5 13h3M7 14.5h2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+						<span>Named inventor on four published IBM patent applications, with two more filed during my time at PayPal.</span>
+						<span class="kf-ref-row__meta">PATENTS</span>
+					</div>
+					<div class="kf-ref-row">
+						<svg class="kf-ref-row__icon" style="color:var(--orange)" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="5.5" cy="5" r="2" stroke="currentColor" stroke-width="1.3"/><circle cx="10.5" cy="5" r="2" stroke="currentColor" stroke-width="1.3"/><path d="M2 13c0-2 1.5-3.5 3.5-3.5S9 11 9 13M7 13c0-2 1.5-3.5 3.5-3.5S14 11 14 13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+						<span>Program committee, International Workshop on Behavior Change Support Systems — 2025 and 2026.</span>
+						<span class="kf-ref-row__meta">SERVICE</span>
+					</div>
+					<div class="kf-ref-row">
+						<svg class="kf-ref-row__icon" style="color:var(--orange)" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="5.5" cy="5" r="2" stroke="currentColor" stroke-width="1.3"/><circle cx="10.5" cy="5" r="2" stroke="currentColor" stroke-width="1.3"/><path d="M2 13c0-2 1.5-3.5 3.5-3.5S9 11 9 13M7 13c0-2 1.5-3.5 3.5-3.5S14 11 14 13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+						<span>Co-organiser, EvalUMAP workshop — UMAP 2019.</span>
+						<span class="kf-ref-row__meta">SERVICE</span>
+					</div>
+					<div class="kf-ref-row">
+						<svg class="kf-ref-row__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 13L13 3M13 3H6M13 3v7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<a href="work.html">Full patent list and case studies on the Work page</a>
+						<span class="kf-ref-row__meta">→</span>
+					</div>
+				</div>
+			</section>
+
+			<h2 style="font-size:22px;font-weight:500;padding:34px 28px 0;margin-bottom:0;">Press &amp; mentions</h2>
+			<p class="kf-press-note"><span>the receipts, in no particular order</span></p>
+			<div class="kf-comic-page kf-comic-page--mosaic">
+				<a class="kf-comic-panel kf-comic-panel--big" href="https://www.siliconrepublic.com/start-ups/trinity-college-dublin-tcd-spinouts-wellness" target="_blank" rel="noopener" style="--panel-color: var(--blue); --panel-art: url(/images/redesign/press-silicon-tcd.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>SiliconRepublic</b><span>TCD spin-outs, Aug 2020</span></div>
+				</a>
+				<a class="kf-comic-panel kf-comic-panel--tall" href="https://viewer.ipaper.io/trinity-development-and-alumni/trinity-alumni-news/october-monthly-alumni-news/?page=1" target="_blank" rel="noopener" style="--panel-color: var(--ink); --panel-art: url(/images/redesign/press-alumni.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>Trinity Alumni News</b><span>Oct 2020</span></div>
+				</a>
+				<div class="kf-comic-panel kf-comic-panel--text kf-comic-panel--wide">
+					<p>A few years later, a PhD somehow turned into a pitch deck.</p>
+				</div>
+				<a class="kf-comic-panel kf-comic-panel--wide" href="https://www.siliconrepublic.com/careers/empushy-notifications-productivity" target="_blank" rel="noopener" style="--panel-color: var(--orange); --panel-art: url(/images/redesign/press-silicon-empathetic.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>SiliconRepublic</b><span>Future of Work, Sep 2019</span></div>
+				</a>
+				<a class="kf-comic-panel" href="https://careers.imascientist.org.uk/profile/kieranfrasercareers/" target="_blank" rel="noopener" style="--panel-color: var(--blue); --panel-art: url(/images/redesign/press-imascientist.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>I'm A Scientist</b><span>Career profile, 2018–</span></div>
+				</a>
+				<a class="kf-comic-panel kf-comic-panel--wide" href="https://www.eventbrite.ie/e/rcsi-and-trinity-innovation-showcase-2020-tickets-124399400957#" target="_blank" rel="noopener" style="--panel-color: var(--blue); --panel-art: url(/images/redesign/press-showcase.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>Innovation Showcase</b><span>Trinity / RCSI, Nov 2020</span></div>
+				</a>
+				<a class="kf-comic-panel kf-comic-panel--wide" href="https://www.youtube.com/watch?v=E1PEnehOGkQ" target="_blank" rel="noopener" style="--panel-color: var(--orange); --panel-art: url(https://img.youtube.com/vi/E1PEnehOGkQ/hqdefault.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>Libtech Showcase</b><span>Trinity Long Room Hub, 2019</span></div>
+				</a>
+				<a class="kf-comic-panel" href="https://www.adaptcentre.ie/news-and-events/kieran-fraser-push-notifications-that-prioritise-digital-wellbeing/" target="_blank" rel="noopener" style="--panel-color: var(--ink); --panel-art: url(/images/redesign/press-adapt.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>ADAPT Centre</b><span>Radio interview, Jan 2021</span></div>
+				</a>
+				<div class="kf-comic-panel kf-comic-panel--text">
+					<p>It started with a hackathon win. Peaked early, worried everyone.</p>
+				</div>
+				<a class="kf-comic-panel" href="https://www.youtube.com/watch?v=jW-KtsQ73yg" target="_blank" rel="noopener" style="--panel-color: var(--orange); --panel-art: url(https://img.youtube.com/vi/jW-KtsQ73yg/hqdefault.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>Sonar Innovation Challenge</b><span>Deezer team, 2016</span></div>
+				</a>
+				<a class="kf-comic-panel" href="https://www.youtube.com/watch?v=y4aIVup-7C0" target="_blank" rel="noopener" style="--panel-color: var(--yellow); --panel-icon: var(--yellow-ink); --panel-art: url(https://img.youtube.com/vi/y4aIVup-7C0/hqdefault.jpg)">
+					<span class="kf-ext-badge kf-plate__badge"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6.5 3H3.5a1 1 0 00-1 1v8.5a1 1 0 001 1H12a1 1 0 001-1V9.5M9 3h4v4M13 3L7.5 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+					<div class="kf-comic-panel__caption"><b>Chip'n'Sim</b><span>Ulster Bank Hackathon, 2015</span></div>
+				</a>
+				<div class="kf-comic-panel kf-comic-panel--text">
+					<p>...and people just kept writing about it.</p>
+				</div>
+			</div>
+
+			<section class="kf-quiet-section" id="contact">
+				<h2>Get in touch</h2>
+				<p style="max-width: 62ch; color: var(--ink); margin-bottom: 18px;">The best reasons to get in touch are an interesting technical problem, a thoughtful collaboration, research with somewhere to go — or something involving cameras, clay or reconstructed rooms.</p>
+				<div class="kf-ref-list">
+					<div class="kf-ref-row">
+						<a href="https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7">LinkedIn</a>
+						<span class="kf-ref-row__meta">FASTEST</span>
+					</div>
+					<div class="kf-ref-row">
+						<a href="https://github.com/kieranfraser">GitHub</a>
+						<span class="kf-ref-row__meta">CODE</span>
+					</div>
+					<div class="kf-ref-row">
+						<a href="https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en">Google Scholar</a>
+						<span class="kf-ref-row__meta">PUBLICATIONS</span>
+					</div>
+					<div class="kf-ref-row">
+						<span>Email — public address to be confirmed. CV — draft, not yet linked.</span>
+						<span class="kf-ref-row__meta">PENDING</span>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+
+	<footer class="kf-foot">
+		<div><b>Available here:</b> work, experiments, papers, photographs and unfinished thoughts.</div>
+		<div class="kf-foot-links">
+			<a href="https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en">Scholar</a><span class="sep">·</span><a href="https://github.com/kieranfraser">GitHub</a><span class="sep">·</span><a href="https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7">LinkedIn</a><span class="sep">·</span><a href="about.html#contact">Contact</a>
+		</div>
+	</footer>
+	</div>
+
+	<div class="kf-lightbox" data-lightbox>
+		<button class="kf-lightbox__close" data-lightbox-close aria-label="Close">&times;</button>
+		<img data-lightbox-img alt="">
+	</div>
+
+	<script>
+		(() => {
+			const lensButtons = [...document.querySelectorAll('[data-lens]')];
+			const rows = [...document.querySelectorAll('[data-kind]')];
+			lensButtons.forEach(button => button.addEventListener('click', () => {
+				const lens = button.dataset.lens;
+				lensButtons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+				rows.forEach(row => row.hidden = row.dataset.kind !== lens);
+			}));
+
+			const menuTrigger = document.querySelector('[data-menu-trigger]');
+			const mobileMenu = document.querySelector('[data-mobile-menu]');
+			if (menuTrigger && mobileMenu) {
+				menuTrigger.addEventListener('click', () => {
+					const open = mobileMenu.hasAttribute('data-open');
+					if (open) {
+						mobileMenu.removeAttribute('data-open');
+						menuTrigger.setAttribute('aria-expanded', 'false');
+					} else {
+						mobileMenu.setAttribute('data-open', '');
+						menuTrigger.setAttribute('aria-expanded', 'true');
+					}
+				});
+			}
+
+			const zoomLinks = [...document.querySelectorAll('a.kf-plate--zoom')];
+			const lightbox = document.querySelector('[data-lightbox]');
+			if (zoomLinks.length && lightbox) {
+				const lightboxImg = lightbox.querySelector('[data-lightbox-img]');
+				const lightboxClose = lightbox.querySelector('[data-lightbox-close]');
+				let lastFocused = null;
+
+				const openLightbox = (href, alt) => {
+					lastFocused = document.activeElement;
+					lightboxImg.src = href;
+					lightboxImg.alt = alt || '';
+					lightbox.setAttribute('data-open', '');
+					lightboxClose.focus();
+					document.body.style.overflow = 'hidden';
+				};
+				const closeLightbox = () => {
+					lightbox.removeAttribute('data-open');
+					lightboxImg.src = '';
+					document.body.style.overflow = '';
+					if (lastFocused) lastFocused.focus();
+				};
+
+				zoomLinks.forEach(link => {
+					link.addEventListener('click', (e) => {
+						e.preventDefault();
+						const img = link.querySelector('img');
+						openLightbox(link.getAttribute('href'), link.dataset.alt || (img ? img.alt : ''));
+					});
+				});
+
+				lightbox.addEventListener('click', (e) => {
+					if (e.target === lightbox) closeLightbox();
+				});
+				lightboxClose.addEventListener('click', closeLightbox);
+				document.addEventListener('keydown', (e) => {
+					if (e.key === 'Escape' && lightbox.hasAttribute('data-open')) closeLightbox();
+				});
+			}
+		})();
+	</script>
+</body>
+</html>
