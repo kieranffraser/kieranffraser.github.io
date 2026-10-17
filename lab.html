@@ -141,6 +141,17 @@
 
 	<script>
 		(() => {
+			const smartBack = document.querySelector('[data-smart-back]');
+			if (smartBack) {
+				const cameFromThisSite = document.referrer && document.referrer.indexOf(location.origin + '/') === 0 && document.referrer !== location.href;
+				if (cameFromThisSite && history.length > 1) {
+					smartBack.addEventListener('click', (e) => {
+						e.preventDefault();
+						history.back();
+					});
+				}
+			}
+
 			const lensButtons = [...document.querySelectorAll('[data-lens]')];
 			const rows = [...document.querySelectorAll('[data-kind]')];
 			lensButtons.forEach(button => button.addEventListener('click', () => {

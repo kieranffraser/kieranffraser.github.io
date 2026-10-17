@@ -88,8 +88,8 @@
 
 	<main id="main">
 
-			<nav class="kf-prevnext" aria-label="Back to Lab">
-				<a href="lab.html"><span class="kf-prevnext-label">Back to</span><span class="kf-prevnext-title">← Lab</span></a>
+			<nav class="kf-prevnext" aria-label="Back">
+				<a href="lab.html" data-smart-back><span class="kf-prevnext-title">← Back</span></a>
 			</nav>
 
 			<div class="kf-eyebrow" style="padding:40px 28px 0;margin-bottom:0;"><i class="kf-mark" aria-hidden="true"></i> Lab experiment</div>
@@ -143,6 +143,17 @@
 
 	<script>
 		(() => {
+			const smartBack = document.querySelector('[data-smart-back]');
+			if (smartBack) {
+				const cameFromThisSite = document.referrer && document.referrer.indexOf(location.origin + '/') === 0 && document.referrer !== location.href;
+				if (cameFromThisSite && history.length > 1) {
+					smartBack.addEventListener('click', (e) => {
+						e.preventDefault();
+						history.back();
+					});
+				}
+			}
+
 			const lensButtons = [...document.querySelectorAll('[data-lens]')];
 			const rows = [...document.querySelectorAll('[data-kind]')];
 			lensButtons.forEach(button => button.addEventListener('click', () => {
