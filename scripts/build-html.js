@@ -92,7 +92,7 @@ function parseSource(raw, filename) {
 	const metaMatch = raw.match(/<!--meta\r?\n([\s\S]*?)\r?\n-->/);
 	if (!metaMatch) throw new Error(`${filename}: missing <!--meta--> block`);
 	const meta = {};
-	for (const line of metaMatch[1].split('\n')) {
+	for (const line of metaMatch[1].split(/\r?\n/)) {
 		const m = line.match(/^(\w+):\s*(.*)$/);
 		if (m) meta[m[1]] = m[2].trim();
 	}
