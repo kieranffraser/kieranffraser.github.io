@@ -58,6 +58,7 @@ const NAV_SECTIONS = [
 
 function activeSectionFor(filename) {
 	if (filename === 'index.html') return 'index';
+	if (filename === 'cv.html') return 'about';
 	const stem = filename.replace(/\.html$/, '');
 	const section = NAV_SECTIONS.find(s => s.key !== 'index' && (stem === s.key || stem.startsWith(s.key + '-')));
 	if (!section) throw new Error(`Cannot determine nav section for ${filename}`);
