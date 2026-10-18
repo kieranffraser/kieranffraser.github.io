@@ -60,6 +60,33 @@
 
 			Portrait: images/me_cartoon.png (1254x1254, real alpha transparency).
 		-->
+	<style>
+		/* Homepage-only: a tiny pixel-art sprite that hops across the comic  */
+		/* strip below, doing a flip mid-air. Purely decorative, so it's     */
+		/* skipped entirely under prefers-reduced-motion, never intercepts   */
+		/* clicks (pointer-events:none), and pauses off-screen/off-tab.      */
+		#kf-hop-track { position: relative; }
+		.kf-sprite-pos {
+			position: absolute;
+			top: 0; left: 0;
+			width: 28px; height: 34px;
+			pointer-events: none;
+			z-index: 5;
+		}
+		.kf-sprite {
+			width: 100%; height: 100%;
+			transform-origin: 50% 85%;
+			filter: drop-shadow(2px 3px 0 rgba(0,0,0,.3));
+		}
+		.kf-sprite--idle { animation: kf-sprite-bob 1.4s ease-in-out infinite; }
+		@keyframes kf-sprite-bob {
+			0%, 100% { transform: translateY(0); }
+			50% { transform: translateY(-3px); }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			.kf-sprite-pos { display: none; }
+		}
+	</style>
 </head>
 <body>
 
@@ -125,7 +152,21 @@
 			<h2 style="font-size:22px;font-weight:500;padding:40px 28px 0;margin-bottom:0;">The story so far</h2>
 			<p class="kf-gallery-key">A rough timeline, work and everything else tangled together.</p>
 
-			<div class="kf-comic-page kf-comic-page--strip">
+			<div class="kf-comic-page kf-comic-page--strip" id="kf-hop-track">
+				<div class="kf-sprite-pos" aria-hidden="true">
+					<svg class="kf-sprite kf-sprite--idle" viewBox="0 0 20 24" shape-rendering="crispEdges">
+						<rect x="5" y="19" width="4" height="5" fill="#10151b"/>
+						<rect x="11" y="19" width="4" height="5" fill="#10151b"/>
+						<rect x="1" y="10" width="3" height="8" fill="#234cff"/>
+						<rect x="16" y="10" width="3" height="8" fill="#234cff"/>
+						<rect x="4" y="9" width="12" height="11" fill="#234cff"/>
+						<rect x="8" y="13" width="4" height="4" fill="#ffd44a" transform="rotate(45 10 15)"/>
+						<rect x="5" y="1" width="10" height="9" fill="#f4f7fa" stroke="#10151b" stroke-width="1"/>
+						<rect x="7" y="5" width="2" height="2" fill="#10151b"/>
+						<rect x="11" y="5" width="2" height="2" fill="#10151b"/>
+						<rect x="14" y="1" width="6" height="2" fill="#ff5a22"/>
+					</svg>
+				</div>
 				<a class="kf-comic-panel" href="work-empushy.html" style="--panel-color: var(--orange); --panel-art: url(/images/redesign/lab_desk_setup.jpg)">
 					<div class="kf-comic-panel__caption"><b>The considerate interruption</b><span>Late nights, EmPushy</span></div>
 				</a>
@@ -176,6 +217,91 @@
 				<div class="kf-now-item"><dt>At home</dt><dd>Pottery wedding gifts with Ana — Cork and Alcalá slips.</dd></div>
 				<div class="kf-now-item"><dt>In motion</dt><dd>Rebuilding CrossFit, playing padel, learning Wicklow.</dd></div>
 			</dl>
+
+			<script>
+			(() => {
+				if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+				const track = document.getElementById('kf-hop-track');
+				const pos = track && track.querySelector('.kf-sprite-pos');
+				const art = track && track.querySelector('.kf-sprite');
+				const panels = track ? [...track.querySelectorAll('.kf-comic-panel')] : [];
+				if (!track || !pos || panels.length < 2) return;
+
+				const SPRITE_W = 28, SPRITE_H = 34;
+				const state = { index: 0, dir: 1, hopping: false, visible: false, timer: null };
+
+				function placeAt(index, animated) {
+					const trackRect = track.getBoundingClientRect();
+					const panelRect = panels[index].getBoundingClientRect();
+					const x = panelRect.left - trackRect.left + panelRect.width / 2 - SPRITE_W / 2;
+					const y = panelRect.top - trackRect.top - SPRITE_H * 0.6;
+					if (!animated) { pos.style.left = x + 'px'; pos.style.top = y + 'px'; }
+					return { x, y };
+				}
+
+				function scheduleNext() {
+					clearTimeout(state.timer);
+					const delay = 1800 + Math.random() * 1400;
+					state.timer = setTimeout(tick, delay);
+				}
+
+				function tick() {
+					if (document.hidden || !state.visible) { scheduleNext(); return; }
+					let next = state.index + state.dir;
+					if (next >= panels.length) { next = panels.length - 2; state.dir = -1; }
+					if (next < 0) { next = 1; state.dir = 1; }
+					hopTo(next);
+				}
+
+				function hopTo(nextIndex) {
+					const from = placeAt(state.index, true);
+					const to = placeAt(nextIndex, true);
+					const dx = to.x - from.x;
+					const dy = to.y - from.y;
+					const arc = Math.max(34, Math.abs(dx) * 0.4);
+
+					state.hopping = true;
+					art.classList.remove('kf-sprite--idle');
+					const anim = art.animate([
+						{ transform: 'translate(0px,0px) rotate(0deg) scale(1,1)', offset: 0 },
+						{ transform: `translate(${dx * 0.3}px, ${Math.min(dy, 0) - arc}px) rotate(130deg) scale(0.9,1.1)`, offset: 0.4 },
+						{ transform: `translate(${dx * 0.7}px, ${Math.min(dy, 0) - arc * 0.6}px) rotate(260deg) scale(1,1)`, offset: 0.7 },
+						{ transform: `translate(${dx}px, ${dy}px) rotate(360deg) scale(1.15,0.85)`, offset: 0.93 },
+						{ transform: `translate(${dx}px, ${dy}px) rotate(360deg) scale(1,1)`, offset: 1 },
+					], { duration: 620, easing: 'ease-in-out', fill: 'forwards' });
+
+					anim.onfinish = () => {
+						art.getAnimations().forEach(a => a.cancel());
+						placeAt(nextIndex, false);
+						art.classList.add('kf-sprite--idle');
+						state.index = nextIndex;
+						state.hopping = false;
+						scheduleNext();
+					};
+				}
+
+				placeAt(0, false);
+
+				const io = new IntersectionObserver(([entry]) => {
+					state.visible = entry.isIntersecting;
+					if (state.visible) scheduleNext();
+				}, { threshold: 0.2 });
+				io.observe(track);
+
+				let resizeTimer;
+				window.addEventListener('resize', () => {
+					clearTimeout(resizeTimer);
+					resizeTimer = setTimeout(() => { if (!state.hopping) placeAt(state.index, false); }, 150);
+				});
+
+				document.addEventListener('visibilitychange', () => {
+					if (!document.hidden && state.visible) scheduleNext();
+				});
+
+				scheduleNext();
+			})();
+			</script>
 
 		</main>
 
