@@ -5,6 +5,7 @@
 	<url><loc>https://kieranfraser.ie/lab.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 	<url><loc>https://kieranfraser.ie/elsewhere.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 	<url><loc>https://kieranfraser.ie/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+	<url><loc>https://kieranfraser.ie/cv.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 	<url><loc>https://kieranfraser.ie/work-fraud.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
 	<url><loc>https://kieranfraser.ie/work-ai-security.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
@@ -16,6 +17,7 @@
 
 	<url><loc>https://kieranfraser.ie/elsewhere-pottery.html</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 	<url><loc>https://kieranfraser.ie/elsewhere-training.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+	<url><loc>https://kieranfraser.ie/elsewhere-motorcycles.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
 	<url><loc>https://kieranfraser.ie/elsewhere-photography.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
 	<url><loc>https://kieranfraser.ie/elsewhere-3d-art.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
 	<url><loc>https://kieranfraser.ie/elsewhere-photogrammetry.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>

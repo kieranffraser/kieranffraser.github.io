@@ -30,6 +30,7 @@ Life outside work: pottery, photography, VR, photogrammetry, training. Each topi
 - [Two soils, one hundred pieces](https://kieranfraser.ie/elsewhere-pottery.html): wedding pottery with slips from Cork and Alcalá de Guadaíra
 - [Beginning again](https://kieranfraser.ie/elsewhere-training.html): CrossFit and padel
 - [Two homes, one camera](https://kieranfraser.ie/elsewhere-photography.html): photography from Cork, Wicklow and Alcalá de Guadaíra
+- [Two wheels](https://kieranfraser.ie/elsewhere-motorcycles.html): weekend motorcycle rides
 - [A VR sketchbook](https://kieranfraser.ie/elsewhere-3d-art.html): Tilt Brush art and the Fionn cinematic series
 - [Photogrammetry](https://kieranfraser.ie/elsewhere-photogrammetry.html): early scans of a mug and a desk
 - [Earlier experiments](https://kieranfraser.ie/elsewhere-video-3d.html): older 360° video work
@@ -37,6 +38,7 @@ Life outside work: pottery, photography, VR, photogrammetry, training. Each topi
 ## About
 
 - [About](https://kieranfraser.ie/about.html): full biography, career timeline, patents, service and contact links
+- [CV](https://kieranfraser.ie/cv.html): ATS-friendly resume, web and downloadable PDF
 
 ## Profiles
 
