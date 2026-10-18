@@ -1,5 +1,5 @@
 <!--meta
-title: CV — Kieran Fraser
+title: Kieran Fraser — CV
 description: Kieran Fraser's CV — Staff Machine Learning Engineer, PhD. Production ML, adversarial AI security, fraud detection, LLM red-teaming.
 -->
 <!--head-extra
@@ -11,6 +11,7 @@ description: Kieran Fraser's CV — Staff Machine Learning Engineer, PhD. Produc
 	"jobTitle": "Staff Machine Learning Engineer",
 	"description": "Staff Machine Learning Engineer and PhD researcher working across production machine learning, adversarial AI security and fraud detection.",
 	"worksFor": { "@type": "Organization", "name": "PayPal" },
+	"email": "mailto:kfraser9292@gmail.com",
 	"alumniOf": [
 		{ "@type": "CollegeOrUniversity", "name": "Trinity College Dublin" }
 	],
@@ -53,12 +54,37 @@ description: Kieran Fraser's CV — Staff Machine Learning Engineer, PhD. Produc
 		.kf-cv-head h1 { margin-top: 0; }
 		.kf-cv-photo { float: right; width: 104px; height: 104px; margin: 2px 0 14px 20px; border: 1px solid var(--line); background: var(--yellow); shape-outside: margin-box; }
 		.kf-cv-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+		.kf-cv-contact { margin: 10px 0 0; font-size: 14px; color: var(--quiet); }
+		.kf-cv-contact a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
 		@media (max-width: 600px) {
 			.kf-cv-photo { float: none; margin: 0 0 16px; }
 		}
+		/* Print: this is what becomes the downloadable/application PDF, so it   */
+		/* is tuned separately from the web page — no photo (avoids US resume-  */
+		/* screening/EEOC friction and ATS OCR risk), tight spacing to fit two  */
+		/* pages, and no duplicate links section since contact line covers it.  */
 		@media print {
-			.kf-top, #kf-mobile-menu, .kf-foot, .skip-link, .kf-cv-download { display: none !important; }
+			.kf-top, #kf-mobile-menu, .kf-foot, .skip-link, .kf-cv-download, .kf-cv-photo, #links { display: none !important; }
 			.kf-page { padding: 0; }
+			body { font-size: 12.5px; }
+			.kf-story-head { padding: 0 0 8px; }
+			.kf-cv-head h1 { font-size: 25px; margin-bottom: 4px; }
+			.kf-story-head .kf-standfirst { font-size: 13px; line-height: 1.4; margin-top: 4px; }
+			.kf-cv-contact { font-size: 11.5px; margin-top: 6px; }
+			.kf-article { padding: 10px 0 0; }
+			.kf-article h2, .kf-quiet-section h2 { font-size: 14px; margin: 11px 0 5px; }
+			.kf-article h2:first-of-type { margin-top: 0; }
+			.kf-article p { font-size: 12px; line-height: 1.4; margin-bottom: 0; }
+			.kf-quiet-section { padding: 6px 0 8px; background: none; }
+			.kf-ref-list { gap: 5px; }
+			.kf-ref-row { padding-bottom: 5px; gap: 2px 10px; font-size: 12px; }
+			.kf-ref-row p, .kf-ref-row span { font-size: 12px; }
+			.kf-cv-role-row b { font-size: 12.5px; }
+			.kf-cv-role-row span { font-size: 10px; }
+			.kf-cv-bullets { margin-top: 3px; }
+			.kf-cv-bullets li { margin-bottom: 1px; line-height: 1.4; font-size: 12px; }
+			h2, .kf-cv-role-row, .kf-ref-row { break-inside: avoid; }
+			h2 { break-after: avoid; }
 		}
 	</style>
 -->
@@ -68,7 +94,8 @@ description: Kieran Fraser's CV — Staff Machine Learning Engineer, PhD. Produc
 			<div class="kf-cv-head">
 				<div class="kf-cv-photo"><img src="images/redesign/me_cartoon_small.png" alt="Hand-drawn editorial portrait of Kieran Fraser"></div>
 				<h1>Kieran Fraser, PhD</h1>
-				<p class="kf-standfirst">Staff Machine Learning Engineer. Production ML, adversarial AI security and fraud detection. Dublin, Ireland.</p>
+				<p class="kf-standfirst">Staff Machine Learning Engineer. Production ML, fraud detection and adversarial AI safety. Dublin, Ireland — open to remote / EU-based roles.</p>
+				<p class="kf-cv-contact">kfraser9292@gmail.com &middot; <a href="https://ie.linkedin.com/in/kieran-fraser-phd-608a54a7">linkedin.com/in/kieran-fraser-phd-608a54a7</a> &middot; <a href="https://github.com/kieranfraser">github.com/kieranfraser</a> &middot; <a href="https://scholar.google.com/citations?user=9v_YcyIAAAAJ&hl=en">Google Scholar</a> &middot; <a href="https://kieranfraser.ie">kieranfraser.ie</a></p>
 				<a class="kf-cv-download" href="assets/pdf/kieran-fraser-cv.pdf" download>
 					<svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1.5v9M4.5 7L8 10.5 11.5 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12.5v1a1 1 0 001 1h10a1 1 0 001-1v-1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
 					Download as PDF
@@ -78,14 +105,14 @@ description: Kieran Fraser's CV — Staff Machine Learning Engineer, PhD. Produc
 
 		<article class="kf-article">
 			<h2>Summary</h2>
-			<p>Staff Machine Learning Engineer with a PhD in Computer Science and eight-plus years spanning production machine learning, adversarial AI security and applied research. Currently build and operate fraud-detection models at PayPal; previously a Research Engineer on IBM's Security and Privacy of AI team, contributing to open-source adversarial-robustness and LLM red-teaming tools (HEART, ART, ARES) and co-authoring research on LLM guardrails, jailbreak detection and synthetic data generation. Experienced translating research into deployed systems and customer-facing outcomes — leading an Enterprise Ireland-funded commercialisation project end to end, mentoring engineers, and shaping technical direction through a company patent programme.</p>
+			<p>Staff Machine Learning Engineer with a PhD in Computer Science and eight-plus years spanning production machine learning, fraud and trust &amp; safety systems, and adversarial AI research. Currently build and deploy fraud-detection models protecting 50M+ PayPal users; previously a Research Engineer on IBM's Security and Privacy of AI team building open-source LLM red-teaming and guardrail tools (HEART, ART, ARES, Granite Guardian), and a PhD researcher designing more considerate, context-aware notification and engagement systems, commercialised as the startup EmPushy. Comfortable across the full arc from research to production: shipping models at scale, filing patents, and translating ML work into customer- and business-facing outcomes.</p>
 		</article>
 
 		<section class="kf-quiet-section">
 			<h2>Core skills</h2>
 			<div class="kf-ref-list">
 				<div class="kf-ref-row">
-					<span><b>Machine learning &amp; AI</b> — machine learning, deep learning, large language models (LLMs), generative AI, adversarial robustness, AI red-teaming &amp; guardrails, synthetic data generation, agentic AI, fraud detection, MLOps</span>
+					<span><b>Machine learning &amp; AI</b> — machine learning, deep learning, PyTorch, TensorFlow, scikit-learn, large language models (LLMs), generative AI, retrieval-augmented generation (RAG), vector databases, LLM fine-tuning (LoRA/PEFT), prompt engineering, adversarial robustness, AI red-teaming &amp; guardrails, synthetic data generation, agentic AI, fraud detection, MLOps</span>
 				</div>
 				<div class="kf-ref-row">
 					<span><b>Engineering</b> — Python, Java, C++, JavaScript, SQL &amp; NoSQL, Docker, Node.js, React, HTML5/CSS/SCSS</span>
@@ -100,14 +127,14 @@ description: Kieran Fraser's CV — Staff Machine Learning Engineer, PhD. Produc
 		</section>
 
 		<section class="kf-quiet-section">
-			<h2>Employment history</h2>
+			<h2>Experience</h2>
 			<div class="kf-ref-list">
 				<div class="kf-ref-row" style="display:block;">
 					<div class="kf-cv-role-row"><b>Staff Machine Learning Engineer, PayPal</b><span>NOV 2026 – PRESENT · DUBLIN</span></div>
 					<ul class="kf-cv-bullets">
-						<li>Build and maintain production machine learning models for onboarding and early-lifecycle fraud detection, balancing fraud prevention against customer experience at scale.</li>
-						<li>Contributed to a redesign of the team's model portfolio and evaluation approach.</li>
-						<li>Filed two patent applications and founded a cross-team patent group to help colleagues navigate the IP process.</li>
+						<li>Deployed a flagship identity and onboarding fraud-detection foundation model serving 50M+ PayPal users, improving on prior versions across detection accuracy, efficiency and explainability.</li>
+						<li>Shaped architecture and strategy for a redesign of PayPal's Global Fraud Prevention platform, partnering with cross-domain teams.</li>
+						<li>Lead inventor on a filed patent applying model-uncertainty measures to adaptive step-up authentication; founded a cross-team patent group within the Fraud &amp; Data Science Centre of Excellence to help colleagues navigate the IP process.</li>
 						<li>Mentor two engineering interns.</li>
 					</ul>
 				</div>
