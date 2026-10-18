@@ -58,7 +58,7 @@ const NAV_SECTIONS = [
 ];
 
 function activeSectionFor(filename) {
-	if (filename === 'index.html') return 'index';
+	if (filename === 'index.html' || filename === '404.html') return 'index';
 	const stem = filename.replace(/\.html$/, '');
 	const section = NAV_SECTIONS.find(s => s.key !== 'index' && (stem === s.key || stem.startsWith(s.key + '-')));
 	if (!section) throw new Error(`Cannot determine nav section for ${filename}`);
@@ -137,8 +137,13 @@ function build() {
 		const raw = fs.readFileSync(path.join(PAGES_DIR, filename), 'utf8');
 		const page = parseSource(raw, filename);
 		const activeKey = activeSectionFor(filename);
+		// 404.html can be served by GitHub Pages for a request at any path depth,
+		// so the usual root-relative hrefs/asset paths would resolve against the
+		// wrong directory. A <base> tag fixes that uniformly for this one page.
+		const headBase = filename === '404.html' ? `<base href="${SITE_ORIGIN}/">\n\t` : '';
 
 		const html = layout
+			.replace('{{HEAD_BASE}}', () => headBase)
 			.replace(/{{TITLE}}/g, () => page.title)
 			.replace(/{{DESCRIPTION}}/g, () => page.description)
 			.replace(/{{CANONICAL}}/g, () => canonicalFor(filename))
